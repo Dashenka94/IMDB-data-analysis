@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <h3>Sidebar</h3>
+                <ul class="nav flex-column">
+                    
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies">Movies over time</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="top_directors">Directors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="top_genres">Genres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rated_stars">High rated stars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="top_genres">Top genres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="genres_time">Genres over time</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="num_of_votes">Votes for movies</a>
+                    </li>
+
+        
+            </div>
+            <div class="col-md-9 main-content">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
